@@ -16,7 +16,7 @@ export default function ChartCard() {
 
   useEffect(() => {
     axios
-      .get("/api/dashboard")
+      .get("https://api-dummy-dashboard.halkh-systems.com/dashboard")
       .then((response) => {
         const data = response.data.data;
 

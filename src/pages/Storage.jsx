@@ -19,7 +19,7 @@ function Storage() {
 
   useEffect(() => {
     axios
-      .get(`/api/storage/${MACHINE_ID}`)
+      .get(`https://api-dummy-dashboard.halkh-systems.com/storage/${MACHINE_ID}`)
       .then((response) => {
         setStorageData(response.data.data || []);
       })

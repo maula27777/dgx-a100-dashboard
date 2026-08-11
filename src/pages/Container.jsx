@@ -9,7 +9,7 @@ function Container() {
 
   useEffect(() => {
     axios
-      .get("/api/container")
+      .get("https://api-dummy-dashboard.halkh-systems.com/container")
       .then((response) => {
         setContainerData(response.data.data);
       })

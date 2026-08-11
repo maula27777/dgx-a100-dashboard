@@ -8,7 +8,7 @@ export default function GPU() {
 
   useEffect(() => {
     axios
-      .get("/api/gpu")
+      .get("https://api-dummy-dashboard.halkh-systems.com/gpu")
       .then((response) => {
         setGpuData(response.data.data);
       })

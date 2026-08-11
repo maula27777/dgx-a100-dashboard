@@ -8,7 +8,7 @@ export default function Process() {
 
   useEffect(() => {
     axios
-      .get("/api/container")
+      .get("https://api-dummy-dashboard.halkh-systems.com/container")
       .then((response) => {
         setProcessData(response.data.data || []);
       })
