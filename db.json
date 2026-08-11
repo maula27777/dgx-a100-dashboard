@@ -1,0 +1,259 @@
+{
+  "overview": {
+  "cpu": 45,
+  "gpu": 78,
+  "ram": 62,
+  "gpuTemp": "71°C",
+  "server": "Online",
+  "activeGPUs": "4 / 8",
+  "network": "Stable",
+  "storage": "1.2 TB Free"
+  },
+
+  "storageUsage": [
+  { "time": "10:00", "usage": 52 },
+  { "time": "10:05", "usage": 54 },
+  { "time": "10:10", "usage": 55 },
+  { "time": "10:15", "usage": 56 },
+  { "time": "10:20", "usage": 57 },
+  { "time": "10:25", "usage": 58 }
+],
+
+"readSpeed": [
+  { "time": "10:00", "speed": 760 },
+  { "time": "10:05", "speed": 790 },
+  { "time": "10:10", "speed": 805 },
+  { "time": "10:15", "speed": 815 },
+  { "time": "10:20", "speed": 810 },
+  { "time": "10:25", "speed": 820 }
+],
+
+"writeSpeed": [
+  { "time": "10:00", "speed": 590 },
+  { "time": "10:05", "speed": 610 },
+  { "time": "10:10", "speed": 625 },
+  { "time": "10:15", "speed": 635 },
+  { "time": "10:20", "speed": 640 },
+  { "time": "10:25", "speed": 645 }
+],
+
+    "gpuUsage": [
+    { "time": "10:00", "usage": 62 },
+    { "time": "10:05", "usage": 68 },
+    { "time": "10:10", "usage": 71 },
+    { "time": "10:15", "usage": 75 },
+    { "time": "10:20", "usage": 73 },
+    { "time": "10:25", "usage": 78 }
+  ],
+
+  "containers": [
+    {
+      "id": 1,
+      "name": "Training Model",
+      "machine": "DGX A100",
+      "container": "training-model",
+      "gpuDevice": "GPU 0",
+      "cpu": 52,
+      "gpu": 78,
+      "net": "Normal",
+      "ram": 63,
+      "status": "Running"
+    },
+    {
+      "id": 2,
+      "name": "Image Classification",
+      "machine": "DGX A100",
+      "container": "image-classification",
+      "gpuDevice": "GPU 1",
+      "cpu": 33,
+      "gpu": 61,
+      "net": "Normal",
+      "ram": 44,
+      "status": "Running"
+    },
+    {
+      "id": 3,
+      "name": "LLM Inference",
+      "machine": "DGX A100",
+      "container": "llm-inference",
+      "gpuDevice": "GPU 2",
+      "cpu": 75,
+      "gpu": 91,
+      "net": "Busy",
+      "ram": 70,
+      "status": "Running"
+    },
+    {
+      "id": 4,
+      "name": "TensorFlow Job",
+      "machine": "DGX A100",
+      "container": "tensorflow-job",
+      "gpuDevice": "GPU 3",
+      "cpu": 40,
+      "gpu": 58,
+      "net": "Normal",
+      "ram": 47,
+      "status": "Idle"
+    },
+    {
+      "id": 5,
+      "name": "PyTorch Worker",
+      "machine": "DGX A100",
+      "container": "pytorch-worker",
+      "gpuDevice": "GPU 4",
+      "cpu": 68,
+      "gpu": 83,
+      "net": "Busy",
+      "ram": 72,
+      "status": "Running"
+    },
+    {
+      "id": 6,
+      "name": "Data Loader",
+      "machine": "DGX A100",
+      "container": "data-loader",
+      "gpuDevice": "GPU 5",
+      "cpu": 25,
+      "gpu": 18,
+      "net": "Low",
+      "ram": 30,
+      "status": "Waiting"
+    }
+  ],
+
+  "processes": [
+    {
+      "id": 1,
+      "name": "Training Model",
+      "machine": "DGX A100",
+      "container": "training-model",
+      "pid": "10234",
+      "gpu": "GPU 0",
+      "cpu": "52%",
+      "ram": "63%",
+      "network": "1.2 Gbps",
+      "runtime": "3h 14m",
+      "log": "Training model running...",
+      "status": "Running"
+    },
+    {
+      "id": 2,
+      "name": "Image Classification",
+      "machine": "DGX A100",
+      "container": "image-classification",
+      "pid": "10983",
+      "gpu": "GPU 1",
+      "cpu": "33%",
+      "ram": "44%",
+      "network": "920 Mbps",
+      "runtime": "2h 08m",
+      "log": "Inference active...",
+      "status": "Running"
+    },
+    {
+      "id": 3,
+      "name": "LLM Inference",
+      "machine": "DGX A100",
+      "container": "llm-inference",
+      "pid": "11546",
+      "gpu": "GPU 2",
+      "cpu": "75%",
+      "ram": "70%",
+      "network": "2.3 Gbps",
+      "runtime": "10h 25m",
+      "log": "Generating response...",
+      "status": "Busy"
+    },
+    {
+      "id": 4,
+      "name": "TensorFlow Job",
+      "machine": "DGX A100",
+      "container": "tensorflow-job",
+      "pid": "11874",
+      "gpu": "GPU 3",
+      "cpu": "40%",
+      "ram": "47%",
+      "network": "560 Mbps",
+      "runtime": "53m",
+      "log": "Idle waiting task...",
+      "status": "Idle"
+    }
+  ],
+
+  "gpus": [
+    {
+      "id": 0,
+      "temp": "69°C",
+      "fan": "58%",
+      "util": "76%",
+      "memory": "64%",
+      "power": "210W"
+    },
+    {
+      "id": 1,
+      "temp": "72°C",
+      "fan": "63%",
+      "util": "84%",
+      "memory": "71%",
+      "power": "225W"
+    },
+    {
+      "id": 2,
+      "temp": "61°C",
+      "fan": "41%",
+      "util": "55%",
+      "memory": "42%",
+      "power": "190W"
+    },
+    {
+      "id": 3,
+      "temp": "75°C",
+      "fan": "76%",
+      "util": "92%",
+      "memory": "88%",
+      "power": "245W"
+    },
+    {
+      "id": 4,
+      "temp": "55°C",
+      "fan": "38%",
+      "util": "40%",
+      "memory": "37%",
+      "power": "170W"
+    },
+    {
+      "id": 5,
+      "temp": "66°C",
+      "fan": "57%",
+      "util": "67%",
+      "memory": "58%",
+      "power": "205W"
+    },
+    {
+      "id": 6,
+      "temp": "71°C",
+      "fan": "61%",
+      "util": "81%",
+      "memory": "79%",
+      "power": "230W"
+    },
+    {
+      "id": 7,
+      "temp": "59°C",
+      "fan": "44%",
+      "util": "48%",
+      "memory": "44%",
+      "power": "182W"
+    }
+  ],
+
+  "storage": {
+    "total": "4 TB",
+    "used": "2.3 TB",
+    "free": "1.7 TB",
+    "usage": 58,
+    "read": "820 MB/s",
+    "write": "645 MB/s",
+    "health": "Healthy"
+  }
+}

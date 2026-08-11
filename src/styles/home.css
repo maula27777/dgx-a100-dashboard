@@ -1,0 +1,140 @@
+.home-page{
+
+    padding:40px;
+
+    color:white;
+
+}
+
+.hero{
+
+    text-align:center;
+
+    margin-bottom:40px;
+
+}
+
+.hero h1{
+
+    font-size:58px;
+
+    margin-bottom:10px;
+
+}
+
+.hero p{
+
+    color:#94A3B8;
+
+    font-size:22px;
+
+}
+
+.subtitle{
+    color:#9ca3af;
+    margin-bottom:30px;
+}
+
+.summary-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:22px;
+
+    margin:35px 0;
+
+}
+
+.card{
+
+    background:#1f1f2a;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    text-align:center;
+
+}
+
+.card h2{
+
+    margin:15px 0;
+
+    font-size:36px;
+
+}
+
+.card span{
+
+    color:#00ff99;
+
+}
+
+.dashboard-grid{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:20px;
+
+}
+
+.chart-card{
+
+    background:#1f1f2a;
+
+    border-radius:15px;
+
+    padding:20px;
+
+}
+
+.chart-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-bottom:20px;
+
+}
+
+.chart-placeholder{
+
+    height:350px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border:1px dashed gray;
+
+    border-radius:10px;
+
+}
+
+.status-card{
+
+    background:#1f1f2a;
+
+    padding:20px;
+
+    border-radius:15px;
+
+}
+
+.status-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin:20px 0;
+
+}

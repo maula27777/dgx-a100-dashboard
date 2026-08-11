@@ -1,0 +1,57 @@
+.chart-card{
+
+    background:#1f2937;
+
+    border:1px solid #374151;
+
+    border-radius:16px;
+
+    padding:20px;
+
+}
+
+.chart-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+}
+
+.chart-header h3{
+
+    color:white;
+
+    font-size:20px;
+
+}
+
+.chart-header span{
+
+    color:#94A3B8;
+
+    font-size:14px;
+
+}
+
+.chart-placeholder{
+
+    height:260px;
+
+    border:1px dashed #475569;
+
+    border-radius:12px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#64748B;
+
+}

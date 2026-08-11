@@ -1,0 +1,143 @@
+/* ============================= */
+/* OVERVIEW SECTION */
+/* ============================= */
+
+.overview-section {
+  background: #1f2937;
+  border: 1px solid #334155;
+  border-radius: 16px;
+
+  padding: 28px;
+  margin-top: 20px;
+  margin-bottom: 24px;
+
+  box-sizing: border-box;
+}
+
+
+/* ============================= */
+/* HEADER */
+/* ============================= */
+
+.overview-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 28px;
+}
+
+.overview-header h2 {
+  margin: 0;
+
+  font-size: 24px;
+  font-weight: 600;
+
+  color: #f8fafc;
+}
+
+.overview-header span {
+  color: #94a3b8;
+
+  font-size: 16px;
+  font-weight: 400;
+}
+
+
+/* ============================= */
+/* RESOURCE CARDS */
+/* ============================= */
+
+.overview-summary {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
+
+  width: 100%;
+}
+
+
+/* ============================= */
+/* INDIVIDUAL CARD */
+/* ============================= */
+
+.overview-box {
+  background: #0f172a;
+
+  border-radius: 14px;
+
+  padding: 22px 20px 18px;
+
+  min-height: 135px;
+
+  box-sizing: border-box;
+
+  text-align: center;
+}
+
+
+/* CARD TITLE */
+
+.overview-box h4 {
+  margin: 0 0 18px;
+
+  color: #cbd5e1;
+
+  font-size: 17px;
+  font-weight: 400;
+}
+
+
+/* CARD VALUE */
+
+.overview-box h1 {
+  margin: 0 0 12px;
+
+  color: #f8fafc;
+
+  font-size: 32px;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 1000px) {
+
+  .overview-summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .overview-section {
+    padding: 20px;
+  }
+
+  .overview-header {
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .overview-header h2 {
+    font-size: 20px;
+  }
+
+  .overview-header span {
+    font-size: 13px;
+  }
+
+  .overview-summary {
+    grid-template-columns: 1fr;
+  }
+
+}

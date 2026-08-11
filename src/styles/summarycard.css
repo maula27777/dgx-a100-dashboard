@@ -1,0 +1,63 @@
+.summary-card{
+
+    background:#1f2937;
+
+    border-radius:16px;
+
+    padding:20px;
+
+    transition:.3s;
+
+    border:1px solid #374151;
+
+}
+
+.summary-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
+
+}
+
+.summary-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.summary-top h4{
+
+    color:#d1d5db;
+
+    font-size:17px;
+
+}
+
+.summary-top h2{
+
+    color:#38bdf8;
+
+    font-size:34px;
+
+}
+
+.summary-card span{
+
+    display:block;
+
+    color:#22c55e;
+
+    margin:8px 0 15px;
+
+}
+
+.mini-chart{
+
+    height:60px;
+
+}

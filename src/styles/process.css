@@ -1,0 +1,228 @@
+.process-page{
+
+    max-width:1300px;
+
+    margin:auto;
+
+    padding:40px;
+
+    color:white;
+
+}
+
+.process-title{
+
+    text-align:center;
+
+    margin-bottom:40px;
+
+}
+
+.process-title h1{
+
+    font-size:60px;
+
+    margin-bottom:20px;
+
+    line-height:1.2;
+
+}
+
+.process-title p{
+
+    color:#94A3B8;
+
+    margin-top:8px;
+
+    font-size:22px;
+
+}
+
+.accordion{
+
+    background:#1f2430;
+
+    border-radius:18px;
+
+    margin-bottom:24px;
+
+    border:1px solid #334155;
+
+    overflow:hidden;
+
+    transition:.3s;
+
+}
+
+.accordion:hover{
+
+    border-color:#38bdf8;
+
+    box-shadow:0 10px 25px rgba(56,189,248,.15);
+
+}
+
+.accordion-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    min-height:140px;
+
+    padding:0 32px;
+
+    cursor:pointer;
+
+}
+
+.accordion-header:hover{
+
+    background:#252b39;
+
+}
+
+.header-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+.arrow{
+
+    font-size:20px;
+
+    transition:.3s;
+
+}
+
+.arrow.rotate{
+
+    transform:rotate(90deg);
+
+}
+
+.status{
+
+    padding:8px 16px;
+
+    border-radius:20px;
+
+    font-weight:bold;
+
+}
+
+.running{
+
+    background:#14532d;
+
+    color:#4ade80;
+
+}
+
+.busy{
+
+    background:#78350f;
+
+    color:#fbbf24;
+
+}
+
+.idle{
+
+    background:#374151;
+
+    color:#d1d5db;
+
+}
+
+.accordion-body{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
+    overflow:hidden;
+
+    max-height:0;
+
+    opacity:0;
+
+    padding:0 30px;
+
+    transition:
+
+        max-height .45s ease,
+
+        opacity .3s ease,
+
+        padding .35s ease;
+
+}
+
+.accordion-body.show{
+
+    max-height:700px;
+
+    opacity:1;
+
+    padding:30px;
+
+    border-top:1px solid #334155;
+
+}
+
+.info-box{
+
+    background:#111827;
+
+    padding:18px;
+
+    border-radius:12px;
+
+}
+
+.info-box label{
+
+    display:block;
+
+    color:#94A3B8;
+
+    margin-bottom:8px;
+
+}
+
+.info-box strong{
+
+    font-size:18px;
+
+}
+
+.full{
+
+    grid-column:span 4;
+
+}
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}

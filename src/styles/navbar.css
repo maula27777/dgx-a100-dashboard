@@ -1,0 +1,51 @@
+.navbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px 50px;
+
+    background:#1d1d25;
+
+    color:white;
+
+    position:sticky;
+
+    top:0;
+
+}
+
+.logo{
+
+    font-size:24px;
+
+    font-weight:bold;
+
+}
+
+.menu{
+
+    display:flex;
+
+    gap:30px;
+
+}
+
+.menu a{
+
+    color:white;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.menu a:hover{
+
+    color:#00ffb7;
+
+}
