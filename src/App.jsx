@@ -1,35 +1,123 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 
+import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Container from "./pages/Container";
 import Process from "./pages/Process";
 import GPU from "./pages/GPU";
 import Storage from "./pages/Storage";
 
+
+function ProtectedRoute({ children }) {
+  const token = localStorage.getItem("token");
+
+  if (!token) {
+    return <Navigate to="/login" replace />;
+  }
+
+  return children;
+}
+
+
+function DashboardLayout({ children }) {
+  return (
+    <>
+      <Navbar />
+      {children}
+    </>
+  );
+}
+
+
 function App() {
   return (
-    <BrowserRouter>
-
-      <Navbar />
-
+    <BrowserRouter
+      basename={import.meta.env.BASE_URL}
+    >
       <Routes>
 
-        <Route path="/" element={<Home />} />
+        {/* LOGIN */}
+        <Route
+          path="/login"
+          element={<Login />}
+        />
 
-        <Route path="/container" element={<Container />} />
 
-        <Route path="/process" element={<Process />} />
+        {/* HOME */}
+        <Route
+          path="/"
+          element={
+            <ProtectedRoute>
+              <DashboardLayout>
+                <Home />
+              </DashboardLayout>
+            </ProtectedRoute>
+          }
+        />
 
-        <Route path="/gpu" element={<GPU />} />
 
-        <Route path="/storage" element={<Storage />} />
+        {/* CONTAINER */}
+        <Route
+          path="/container"
+          element={
+            <ProtectedRoute>
+              <DashboardLayout>
+                <Container />
+              </DashboardLayout>
+            </ProtectedRoute>
+          }
+        />
+
+
+        {/* PROCESS */}
+        <Route
+          path="/process"
+          element={
+            <ProtectedRoute>
+              <DashboardLayout>
+                <Process />
+              </DashboardLayout>
+            </ProtectedRoute>
+          }
+        />
+
+
+        {/* GPU */}
+        <Route
+          path="/gpu"
+          element={
+            <ProtectedRoute>
+              <DashboardLayout>
+                <GPU />
+              </DashboardLayout>
+            </ProtectedRoute>
+          }
+        />
+
+
+        {/* STORAGE */}
+        <Route
+          path="/storage"
+          element={
+            <ProtectedRoute>
+              <DashboardLayout>
+                <Storage />
+              </DashboardLayout>
+            </ProtectedRoute>
+          }
+        />
 
       </Routes>
-
     </BrowserRouter>
   );
 }
+
 
 export default App;
